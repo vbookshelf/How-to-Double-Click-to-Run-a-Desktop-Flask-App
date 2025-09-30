@@ -67,16 +67,16 @@ Change the file name if necessary
 This terminal command will create a file named: uv.lock
 % uv lock
 
-5- For Mac users: Create a file named start-app.command
+5- For Mac users: Create a file named start-nac-app.command
 Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
 Template: xxxxxx
 
 6- Make the start-app.command executable
-% chmod +x start-app.command
+% chmod +x start-mac-app.command
 
 Now when a user double clicks this file it will install all dependencies and start your app.
 
-7- For Windows users: Create a file named start-app.bat
+7- For Windows users: Create a file named start-windows-app.bat
 Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
 Template: xxxxxx
 
@@ -107,12 +107,12 @@ app.py
 static (if this folder is being used)
 pyproject.toml
 uv.lock
-start-app.command
-start-app.bat
+start-mac-app.command
+start-windows-app.bat
 
 11- Launch your app:
-If you are using Mac double-click: start-app.command
-If you are using Windows double-click: start-app.bat
+If you are using Mac double-click: start-mac-app.command
+If you are using Windows double-click: start-windows-app.bat
 
 Your app should open in your browser. You can check the terminal to see if there are any errors.
 
