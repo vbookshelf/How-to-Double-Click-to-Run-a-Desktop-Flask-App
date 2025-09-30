@@ -1,5 +1,7 @@
 # How to Double Click to Run a Flask App
 
+<br>
+
 A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from their desktop. No command line needed. The steps below cover both Mac and Windows.
 
 This process uses the UV python package manager and not pip. Start by installing uv.
@@ -37,6 +39,21 @@ This is a sample template that you can edit: xxxxxxxx
 The pyproject.toml file is the uv equivalent of the requirements.txt file. UV does not use requirements.txt
 
 Place the pyproject.toml file inside Example-Project-Folder.
+
+This is what the pyproject.toml file looks like:
+
+[project]
+name = "myOfflineAi"
+version = "1.0"
+description = "A Flask UI for Ollama"
+requires-python = "==3.10.*"
+dependencies = [
+	"flask==3.1.2",
+	"ollama==0.6.0",
+	"pymupdf==1.26.4",
+	"pillow==11.3.0",
+	"requests==2.32.5",
+]
 
 3- Make sure the file is named pyproject.toml and not pyproject.toml.txt
 Use the terminal to change the file name if needed.
