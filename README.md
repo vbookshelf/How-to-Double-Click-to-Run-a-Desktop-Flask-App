@@ -21,20 +21,22 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 <br>
 
 ```
-1- Create a project folder<br>
+1- Create a project folder
 
 Create a project folder named: Example-Project-Folder.
 Place Example-Project-Folder on your desktop.
-cd into Place Example-Project-Folder.
+cd into Example-Project-Folder.
 
 % cd Desktop
 % cd Example-Project-Folder
 
-2- Create a pyproject.toml file and place it inside Example-Project-Folder
+2- Create a pyproject.toml file
 Add your flask app's project dependencies to a file named pyproject.toml
 This is a sample template that you can edit: xxxxxxxx
 
 The pyproject.toml file is the uv equivalent of the requirements.txt file. UV does not use requirements.txt
+
+Place the pyproject.toml file inside Example-Project-Folder.
 
 3- Make sure the file is named pyproject.toml and not pyproject.toml.txt
 Use the terminal to change the file name if needed.
@@ -95,6 +97,6 @@ start-app.bat
 If you are using Mac double-click: start-app.command
 If you are using Windows double-click: start-app.bat
 
-Your app should open in your browser
+Your app should open in your browser. You can check the terminal to see if there are any errors.
 
 ```
