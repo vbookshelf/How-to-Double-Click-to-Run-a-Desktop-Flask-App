@@ -1,28 +1,52 @@
 # How-to-Double-Click-to-Run-Flask-App
 A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app. No command line needed.
 
+This process uses UV python package manager and not pip. Start by installing uv.
+
+UV is a new and fast python package manager.
+Here you will find the instructions to install uv on Mac and Windows:
+https://docs.astral.sh/uv/getting-started/installation
+
+```
+Open your terminal and copy paste this command:
+
+Mac:
+wget -qO- https://astral.sh/uv/install.sh | sh
+
+Windows:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+```
+
+<br>
+
 ```
 1- Create a project folder<br>
-Let's create a project folder named: Example-Project-Folder
+
+Create a project folder named: Example-Project-Folder.
+Place Example-Project-Folder on your desktop.
+cd into Place Example-Project-Folder.
 
 % cd Desktop
 % cd Example-Project-Folder
 
-Place Example-Project-Folder on your desktop
-Note that all terminal commands below should be executed inside Example-Project-Folder.
-
 2- Create a pyproject.toml file and place it inside Example-Project-Folder<br>
-Add the project dependencies to a file named pyproject.toml<br>
+Add your flask app's project dependencies to a file named pyproject.toml<br>
 This is a sample template that you can edit: xxxxxxxx
 
+The pyproject.toml file is the uv equivalent of the requirements.txt file. UV does not use requirements.txt
+
 3- Make sure the file is named pyproject.toml and not pyproject.toml.txt<br>
-Use the terminal to change the file name if needed:<br>
+Use the terminal to change the file name if needed.
+
+List all files
+% ls
+Change the file name if necessary
 % mv pyproject.toml.txt pyproject.toml
 
 4- Create the uv lock file
+This terminal command will create a file named: uv.lock
 % uv lock
-
-This command will create a file named: uv.lock
 
 5- For Mac users: Create a file named start-app.command
 Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
@@ -30,6 +54,8 @@ Template: xxxxxx
 
 6- Make the start-app.command executable
 % chmod +x start-app.command
+
+Now when a user double clicks this file it will install all dependencies and start your app.
 
 7- For Windows users: Create a file named start-app.bat
 Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
@@ -55,7 +81,7 @@ if __name__ == "__main__":
     # Start Flask app
     app.run(host="127.0.0.1", port=5000, debug=False, threaded=True)
 
-9- Place your app.py file and your static folder in  Example-Project-Folder
+9- Place your app.py file and your static folder (if you have one) in  Example-Project-Folder
 
 10- The full list of files and folders in  Example-Project-Folder should be:
 app.py
@@ -70,7 +96,5 @@ If you are using Mac double-click: start-app.command
 If you are using Windows double-click: start-app.bat
 
 Your app should open in your browser
-
-
 
 ```
