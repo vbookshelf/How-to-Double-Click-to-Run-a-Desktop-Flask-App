@@ -30,13 +30,13 @@ cd into Place Example-Project-Folder.
 % cd Desktop
 % cd Example-Project-Folder
 
-2- Create a pyproject.toml file and place it inside Example-Project-Folder<br>
-Add your flask app's project dependencies to a file named pyproject.toml<br>
+2- Create a pyproject.toml file and place it inside Example-Project-Folder
+Add your flask app's project dependencies to a file named pyproject.toml
 This is a sample template that you can edit: xxxxxxxx
 
 The pyproject.toml file is the uv equivalent of the requirements.txt file. UV does not use requirements.txt
 
-3- Make sure the file is named pyproject.toml and not pyproject.toml.txt<br>
+3- Make sure the file is named pyproject.toml and not pyproject.toml.txt
 Use the terminal to change the file name if needed.
 
 List all files
