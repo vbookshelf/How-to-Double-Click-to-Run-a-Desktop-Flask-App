@@ -1,4 +1,4 @@
-# How to Double Click to Run a Flask App
+# How to Double Click to Run a Desktop Flask App
 
 <br>
 
