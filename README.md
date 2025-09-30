@@ -4,7 +4,7 @@ A step-by-step process to set up a Flask app so that the user only needs to doub
 
 This process uses the UV python package manager and not pip. Start by installing uv.
 
-Here you will find the instructions to install uv on Mac and Windows:
+Here you will find the instructions to install uv on Mac and Windows:<br>
 https://docs.astral.sh/uv/getting-started/installation
 
 ```
