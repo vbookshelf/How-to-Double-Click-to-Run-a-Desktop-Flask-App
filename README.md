@@ -100,3 +100,18 @@ If you are using Windows double-click: start-app.bat
 Your app should open in your browser. You can check the terminal to see if there are any errors.
 
 ```
+
+By default, uv sync only installs packages already locked in uv.lock.
+Normally, if you add something to pyproject.toml manually, you then need to run uv lock. However, the script in start-app.command automates this - uv lock runs every time. You don't have to manually run uv lock again — the script does it. The script always makes sure everything is up-to-date.
+
+When you add something to pyproject.toml, uv will ensure that all packages work together without any clashes.
+
+This is where uv lock shines.
+
+When you add a new dependency, uv calculates the entire dependency graph.
+
+If two packages want different versions of the same library (e.g., requests==2.28 vs requests==2.32), uv tries to find a compatible version that satisfies both.
+
+If no compatible version exists, it will fail with a clear error (instead of installing something broken).
+
+This ensures that everything in your environment works together consistently.
