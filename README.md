@@ -1,9 +1,9 @@
-# How-to-Double-Click-to-Run-Flask-App
-A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app. No command line needed.
+# How to Double Click to Run a Flask App
 
-This process uses UV python package manager and not pip. Start by installing uv.
+A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app. No command line needed. The steps below cover both Mac and Windows.
 
-UV is a new and fast python package manager.
+This process uses the UV python package manager and not pip. Start by installing uv.
+
 Here you will find the instructions to install uv on Mac and Windows:
 https://docs.astral.sh/uv/getting-started/installation
 
