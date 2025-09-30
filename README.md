@@ -36,7 +36,8 @@ cd into Example-Project-Folder.
 Add your flask app's project dependencies to a file named pyproject.toml
 This is a sample template that you can edit: xxxxxxxx
 
-The pyproject.toml file is the uv equivalent of the requirements.txt file. UV does not use requirements.txt
+The pyproject.toml file is the uv equivalent of the requirements.txt file.
+UV does not use requirements.txt
 
 Place the pyproject.toml file inside Example-Project-Folder.
 
@@ -67,17 +68,19 @@ Change the file name if necessary
 This terminal command will create a file named: uv.lock
 % uv lock
 
-5- For Mac users: Create a file named start-nac-app.command
-Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
+5- For Mac users: Create a file named start-mac-app.command
+Use this template as an example. Use ChatGPT to customize it for your flask app.
+This example file checks that Ollama is installed. Your app may not need that check.
 Template: xxxxxx
 
-6- Make the start-app.command executable
+6- Make the start-mac-app.command file executable
 % chmod +x start-mac-app.command
 
 Now when a user double clicks this file it will install all dependencies and start your app.
 
 7- For Windows users: Create a file named start-windows-app.bat
-Use this template as an example. Use ChatGPT to customize it for your flask app e.g. This file checks that Ollama is installed. Your app may not need that check.
+Use this template as an example. Use ChatGPT to customize it for your flask app.
+Again, this example file checks that Ollama is installed. Your app may not need that check.
 Template: xxxxxx
 
 8- Ensure that your app will auto start in the bowser i.e. the user won't need to copy the url from the terminal and paste in in the browser. This is the sample code that does that:
