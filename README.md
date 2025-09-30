@@ -132,3 +132,16 @@ If two packages want different versions of the same library (e.g., requests==2.2
 If no compatible version exists, it will fail with a clear error (instead of installing something broken).
 
 This ensures that everything in your environment works together consistently.
+
+### Note 2
+
+On Windows:
+
+.bat and .cmd files are recognized as executable by default
+Double-clicking them will immediately launch Command Prompt and execute the script
+No permission changes needed
+
+On macOS:
+
+.command files do need chmod +x to be executable
+Without it, double-clicking will try to open them in a text editor instead of executing them
