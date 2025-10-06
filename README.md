@@ -2,10 +2,12 @@
 
 <br>
 
-A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from the desktop. No command line needed. The steps below cover both Mac and Windows.
+Flask apps are simple, powerful, transparent and can be run on a desktop. However, one area of friction is that the user needs to use the command line to install Python dependencies and launch the app. Non-programmers are not comfortable using terminal commands. This project shows how to solve that problem.
+
+Here I show a step-by-step process to set up a Flask app so that the user only needs to double-click a file to install Python dependencies and run the app from the desktop. No command line needed. 
 
 I followed this process when creating the myOfflineAi desktop app. The example templates that we will use here are from that app:<br>
-https://github.com/vbookshelf/myOfflineAi
+https://github.com/vbookshelf/myOfflineAi-Privacy-First-Ai
 
 
 <br>
