@@ -4,7 +4,7 @@
 
 A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from the desktop. No command line needed. The steps below cover both Mac and Windows.
 
-I followed this process when creating the myOfflineAi desktop flask app. The example templates that we will use here are from that app:<br>
+I followed this process when creating the myOfflineAi desktop app. The example templates that we will use here are from that app:<br>
 https://github.com/vbookshelf/myOfflineAi
 
 
