@@ -2,9 +2,9 @@
 
 <br>
 
-A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from their desktop. No command line needed. The steps below cover both Mac and Windows.
+A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from the desktop. No command line needed. The steps below cover both Mac and Windows.
 
-I followed this process when creating the myOfflineAi app. The example templates that we will use here are from that app:<br>
+I followed this process when creating the myOfflineAi desktop flask app. The example templates that we will use here are from that app:<br>
 https://github.com/vbookshelf/myOfflineAi
 
 
@@ -33,6 +33,10 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ### 2. Follow these steps
 
 ```
+The terminal commands shown below are for macOS.
+There’s no need to type the % symbol.
+
+
 1- Create a project folder
 
 Create a project folder named: Example-Project-Folder.
@@ -72,6 +76,7 @@ Use the terminal to change the file name if needed.
 
 List all files
 % ls
+
 Change the file name if necessary
 % mv pyproject.toml.txt pyproject.toml
 
@@ -80,6 +85,7 @@ This terminal command will create a file named: uv.lock
 % uv lock
 
 5- For Mac users: Create a file named start-mac-app.command
+
 Use this template as an example. Use ChatGPT to customize it for your flask app.
 This example file checks that Ollama is installed. Your app may not need that check.
 Template:
@@ -91,12 +97,15 @@ https://github.com/vbookshelf/How-to-Double-Click-to-Run-a-Flask-App/blob/main/t
 Now when a user double clicks this file it will install all dependencies and start your app.
 
 7- For Windows users: Create a file named start-windows-app.bat
+
 Use this template as an example. Use ChatGPT to customize it for your flask app.
 Again, this example file checks that Ollama is installed. Your app may not need that check.
 Template:
 https://github.com/vbookshelf/How-to-Double-Click-to-Run-a-Flask-App/blob/main/templates/start-windows-app.bat
 
-8- Ensure that your app will auto start in the bowser i.e. the user won't need to copy the url from the terminal and paste in in the browser. This is the sample code that does that:
+8- Set up your Flask app to auto launch in the browser
+
+Ensure that your app will auto launch in the browser i.e. the user won't need to copy the url from the terminal and paste in in the browser. This is the sample code that does that:
 
 if __name__ == "__main__":
 	
@@ -127,6 +136,7 @@ start-mac-app.command
 start-windows-app.bat
 
 11- Launch your app:
+
 If you are using Mac double-click: start-mac-app.command
 If you are using Windows double-click: start-windows-app.bat
 
@@ -151,5 +161,7 @@ No permission changes needed.
 
 On macOS:
 
-.command files do need chmod +x to be executable.<br>
-Without it, double-clicking will try to open them in a text editor instead of executing them.
+.command files need chmod +x to be executable.<br>
+Without it, double-clicking will open them in a text editor instead of executing the code.
+
+<br>
