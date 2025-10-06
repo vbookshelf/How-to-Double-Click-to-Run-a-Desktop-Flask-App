@@ -166,4 +166,54 @@ On macOS:
 .command files need chmod +x to be executable.<br>
 Without it, double-clicking will open them in a text editor instead of executing the code.
 
+### Note 3
+
+Say you created an app and uploaded it to GitHub. Your intention is for your users to download the app, and then double-click a start-app.command file to run the app. macOS will block this. When you download an .app (or .command, .sh, .pkg, or other executable) file from GitHub (or anywhere on the internet), macOS marks it with a “quarantine” flag for security. This is part of macOS’s Gatekeeper system, which is designed to protect users from running potentially unsafe or unverified code. If the user tries to double click a file to run it, macOS will block it. On the myOfflineAi project I got around this problem by modifying the setup instructions so that the user runs a terminal command that creates a copy of the start-mac-app.command file and then makes it executeable. I also included instructions to get around this problem in Windows.
+
+This is an excerpt from the setup instructions. See macOS point 7.
+
+```
+
+4. Initial Setup
+--------------------------------------------------------------
+
+[ macOS ]
+
+1. Open Terminal (Command+Space, type "Terminal")
+2. Paste this command into the terminal to install uv:
+wget -qO- https://astral.sh/uv/install.sh | sh
+3. Wait for uv installation to finish
+4. Type 'cd ' in the terminal (with a space after cd)
+5. Drag the myOfflineAi-v1.1 folder into the Terminal window
+6. Press Enter
+7. Paste this command into the terminal:
+cat start-mac-app.command > temp && mv temp start-mac-app.command && chmod +x start-mac-app.command
+8. Press Enter
+9. Open the myOfflineAi-v1.1 folder
+10. Double-click: start-mac-app.command
+
+
+[ Windows ]
+
+1. Press the Windows key on your keyboard
+2. Type cmd and press Enter (a black window will open)
+3. Copy this entire command:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+4. Right-click in the black window to paste
+5. Press Enter
+6. Wait for "uv installed successfully" or similar message
+7. Close the window and open a new one for the changes to take effect
+8. Navigate to the myOfflineAi-v1.1 folder thats on your desktop
+9. Double-click: start-windows-app.bat
+
+If Windows shows a security warning:
+1. Right-click on start-windows-app.bat 
+2. Select "Properties"
+3. Check the "Unblock" box at the bottom
+4. Click "OK"
+5. Now double-click start-windows-app.bat to run
+
+
+```
+
 <br>
