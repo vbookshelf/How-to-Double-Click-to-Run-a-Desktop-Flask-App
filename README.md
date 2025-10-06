@@ -4,11 +4,15 @@
 
 A step-by-step process to set up a Flask app so that the user only needs to double-click a file to run the app from their desktop. No command line needed. The steps below cover both Mac and Windows.
 
-I followed this process when creating the myOfflineAi app. The templtes that we will use here are from that app:<br>
+I followed this process when creating the myOfflineAi app. The example templates that we will use here are from that app:<br>
 https://github.com/vbookshelf/myOfflineAi
 
 
-This workflow uses the UV python package manager and not pip. Start by installing uv.
+<br>
+
+### 1. Install UV
+
+This workflow uses the UV python package manager and not pip. 
 
 Here you will find the instructions to install uv on Mac and Windows:<br>
 https://docs.astral.sh/uv/getting-started/installation
@@ -25,6 +29,8 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```
 
 <br>
+
+### 2. Follow these steps
 
 ```
 1- Create a project folder
@@ -127,31 +133,23 @@ If you are using Windows double-click: start-windows-app.bat
 Your app should open in your browser. You can check the terminal to see if there are any errors.
 
 ```
+<br>
 
-By default, uv sync only installs packages already locked in uv.lock.
-Normally, if you add something to pyproject.toml manually, you then need to run uv lock. However, the script in start-app.command automates this - uv lock runs every time. You don't have to manually run uv lock again — the script does it. The script always makes sure everything is up-to-date.
+### Note 1
 
-When you add something to pyproject.toml, uv will ensure that all packages work together without any clashes.
+By default, uv sync only installs packages already locked in uv.lock. Normally, if you add something to pyproject.toml manually, you then need to run uv lock. However, the script in start-app.command automates this - uv lock runs every time. You don't have to manually run uv lock again — the script does it. The script always makes sure everything is up-to-date. When you add something to pyproject.toml, uv will ensure that all packages work together without any clashes.
 
-This is where uv lock shines.
-
-When you add a new dependency, uv calculates the entire dependency graph.
-
-If two packages want different versions of the same library (e.g., requests==2.28 vs requests==2.32), uv tries to find a compatible version that satisfies both.
-
-If no compatible version exists, it will fail with a clear error (instead of installing something broken).
-
-This ensures that everything in your environment works together consistently.
+This is where uv lock shines. When you add a new dependency, uv calculates the entire dependency graph. If two packages want different versions of the same library (e.g., requests==2.28 vs requests==2.32), uv tries to find a compatible version that satisfies both. If no compatible version exists, it will fail with a clear error (instead of installing something broken). This ensures that everything in your environment works together consistently.
 
 ### Note 2
 
 On Windows:
 
-.bat and .cmd files are recognized as executable by default
-Double-clicking them will immediately launch Command Prompt and execute the script
-No permission changes needed
+.bat and .cmd files are recognized as executable by default.<br>
+Double-clicking them will immediately launch Command Prompt and execute the script.<br>
+No permission changes needed.
 
 On macOS:
 
-.command files do need chmod +x to be executable
-Without it, double-clicking will try to open them in a text editor instead of executing them
+.command files do need chmod +x to be executable.<br>
+Without it, double-clicking will try to open them in a text editor instead of executing them.
